@@ -1,0 +1,13 @@
+:root {
+    --primary:#058359 ;
+    --secondary:#AC4425 ;
+}
+
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 16px;
+}
+
