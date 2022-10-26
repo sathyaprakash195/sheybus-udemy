@@ -48,6 +48,15 @@ function ProtectedRoute({ children }) {
     }
   }, []);
 
+  useEffect(() => {
+    if (window.location.pathname.includes("admin")) {
+      if (!user?.isAdmin) {
+        message.error("You are not authorized to access this page");
+        window.location.href = "/";
+      }
+    }
+  }, [user]);
+
   return (
     <div>{user !== null && <DefaultLayout>{children}</DefaultLayout>}</div>
   );
